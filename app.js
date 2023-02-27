@@ -37,6 +37,15 @@ app.get("/contact",(req,res)=>{
 });
 
 
+app.get("/compose",(req,res)=>{
+  res.render("compose");
+});
+
+app.post("/compose",(req,res)=>{
+  let item = req.body.newItem
+  console.log(item)
+  res.redirect("/compose")
+});
 
 
 
