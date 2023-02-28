@@ -54,6 +54,19 @@ app.post("/compose",(req,res)=>{
 });
 
 
+app.get("/posts/:postName",(req,res)=>{
+  const paramPostName = req.params.postName;
+  console.log(`param is : ${paramPostName}`);
+  article.forEach(element=>{
+    const loopTitle = element.title
+
+    if (loopTitle===paramPostName) {
+      console.log("Match Found!");
+    }
+  });
+});
+
+
 
 
 
