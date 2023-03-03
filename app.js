@@ -62,8 +62,10 @@ app.get("/posts/:postName",(req,res)=>{
 
     if (loopTitle===paramPostName) {
       console.log("Match Found!");
-    } else {
-      console.log("Not Found!");
+      res.render("post",{
+        title:loopTitle,
+        content:element.content
+      });
     }
   });
 });
