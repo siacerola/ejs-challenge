@@ -4,7 +4,7 @@
 <p><%= homeStartingContent %></p>
 <% articles.forEach(i => { %>
     <h1><%= i.title %></h1>
-    <p><%= i.content %></p>
+    <p><%= i.content.substr(0,100).concat("...") %></p>
 <% }); %>
     
 <%- include('partials/footer') %>
